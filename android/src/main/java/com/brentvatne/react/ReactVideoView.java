@@ -257,9 +257,11 @@ public class ReactVideoView extends ScalableVideoView implements MediaPlayer.OnP
                     } catch (IOException e) {
                         e.printStackTrace();
 			this.onError(mMediaPlayer, 0, 0);
+			return;
                     } catch (NullPointerException e) {
                         e.printStackTrace();
 			this.onError(mMediaPlayer, 0, 0);
+			return;
                     }
                 }
                 if(fd==null) {
