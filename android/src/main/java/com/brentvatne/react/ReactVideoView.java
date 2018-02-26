@@ -256,8 +256,10 @@ public class ReactVideoView extends ScalableVideoView implements MediaPlayer.OnP
                         fd = expansionFile.getAssetFileDescriptor(uriString.replace(".mp4","") + ".mp4");
                     } catch (IOException e) {
                         e.printStackTrace();
+			this.onError(mMediaPlayer, 0, 0);
                     } catch (NullPointerException e) {
                         e.printStackTrace();
+			this.onError(mMediaPlayer, 0, 0);
                     }
                 }
                 if(fd==null) {
